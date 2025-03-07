@@ -1,0 +1,135 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.header__logo {
+  color:gray;
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero__container {
+  max-width: 1230px;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: fit-content;
+}
+
+.hero__about {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 25px;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.hero__subtitle {
+  font-size: 32px;
+  font-weight:400; 
+}
+
+.hero__links {
+  display: flex;
+  gap: 8px;
+}
+
+.hero__link {
+  margin-right: 10px;
+  font-size: 30px;
+  color: #000;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+hero__link:hover {
+  color: #2b6f971b;
+}
+
+.hero__box {
+  aspect-ratio: 1;
+  max-width: 500px;
+  justify-self: center;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  border: 10px solid #feffff00;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: ava-animate 5s infinite alternate;
+}
+
+.hero__box-img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes ava-animate {
+  0%{
+    border-radius: 80% 20% 86% 14% / 30% 47% 53% 70% ;
+  }
+  40% {
+    border-radius:28% 72% 7% 93% / 30% 32% 68% 70% ;
+  }
+  60% {
+    border-radius: 5% 95% 79% 21% / 84% 14% 86% 16% ;
+  }
+  100% {
+    border-radius: 72% 28% 15% 85% / 65% 88% 12% 35% ;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero__container {
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 88px;
+  }
+  
+  .hero__box {
+    order: 1;
+    max-width: 400px;
+  }
+
+  .hero__about {
+    align-items: center;
+    width: 100%;
+    order: 2;
+  }
+}
