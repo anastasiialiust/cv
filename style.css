@@ -96,10 +96,11 @@ hero__link:hover {
 
 .hero__box-img {
   width: 100%;
+  object-fit: cover;
   height: 100%;
 }
 
-@keyframes ava-animate {
+@keyframes ava-animate {  
   0%{
     border-radius: 80% 20% 86% 14% / 30% 47% 53% 70% ;
   }
